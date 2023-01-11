@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andika&family=Josefin+Sans:wght@400;700&family=Roboto:ital@0;1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: rgb(50, 49, 49);
+    color: white;
+    height: 35px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-family: 'Roboto', sans-serif;
+}
+nav ul{
+    list-style-type: none;
+}
+.gameContainer{
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    position: relative;
+}
+.line{
+    background-color: rgb(54, 209, 54);
+    position: absolute;
+    width: 0;
+    height: 3px;
+    transition: width 0.75s ease-in;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    font-family: 'Roboto', sans-serif;
+}
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(241, 237, 245);
+    cursor: pointer;
+}
+.info{
+    font-size: 22px;
+}
+.gameInfo{
+    padding: 0 34px;
+    font-family: 'Andika', sans-serif;
+}
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.br{
+    border-right: 0;
+}
+.bl{
+    border-left: 0;
+}
+.bt{
+    border-top: 0;
+}
+.bb{
+    border-bottom: 0;
+}
+.btn{
+    cursor: pointer;
+    margin: 0 23px;
+    padding: 4px 8px;
+    background-color: rgb(228, 167, 228);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 800px){
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+    .box{
+        font-size: 14vw;
+    }
+}
